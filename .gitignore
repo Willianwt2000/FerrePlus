@@ -1,0 +1,48 @@
+# Archivos binarios y de compilación
+bin/
+obj/
+
+Archivos de usuario y configuración de IDE
+*.user
+*.suo
+*.userprefs
+*.vscode
+
+Resultados de pruebas
+TestResults/
+
+Paquetes NuGet
+packages/
+*.nupkg
+.nuget/
+
+Archivos de ReSharper
+_ReSharper.*
+*.resharper
+
+ Rider (JetBrains IDE)
+.idea/
+
+ Archivos de MSBuild
+*.csproj.user
+*.pubxml
+
+Archivos de publicación
+publish/
+
+ Archivos de depuración
+*.pdb
+*.ilk
+
+ Archivos temporales
+*.tmp
+*.temp
+
+ Archivos de logs
+*.log
+*.tlog
+
+ Archivos de VS
+.vs/
+*.swp
+*.swo
