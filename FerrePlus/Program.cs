@@ -43,3 +43,6 @@ using (var scope = app.Services.CreateScope())
 
 
 app.Run();
+
+
+//Agregar validacion con jwt ,middleware y filtro
