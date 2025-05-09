@@ -2,11 +2,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using FerrePlus.Data;
 using FerrePlus.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace FerrePlus.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+
 public class EmployeeController : ControllerBase
 {
   private readonly FerrePlusDbContext _context;
@@ -49,6 +51,7 @@ public class EmployeeController : ControllerBase
 
   // PUT: api/employee/5
   [HttpPut("{id}")]
+  
   public async Task<IActionResult> PutEmployee(int id, Employee employee)
   {
     if (id != employee.Id)
@@ -77,6 +80,7 @@ public class EmployeeController : ControllerBase
 
   
   [HttpDelete("{id}")]
+  [Authorize]
   public async Task<IActionResult> DeleteEmployee(int id)
   {
     var employee = await _context.Employees.FindAsync(id);
