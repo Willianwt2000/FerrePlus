@@ -10,7 +10,7 @@ public class ResponseHeaderAttribute : ActionFilterAttribute
 
     public override void OnResultExecuting(ResultExecutingContext context)
     {
-        context.HttpContext.Response.Headers.Add(_name, _rol);
+        context.HttpContext.Response.Headers.Append(_name, _rol);
 
         base.OnResultExecuting(context);
     }
